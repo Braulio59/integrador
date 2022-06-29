@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=League+Gothic&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+} 
+
+.body{
+    width: 100%;
+}
+
+.section-container {
+   /* border: 1px #CCC solid ; */
+   box-shadow: 0 0 10px 1px rgba(169, 167, 167, 0.6) ;
+    
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1300px;
+} 
+
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+ 
+.header {
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+    
+} 
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Lato",sans-serif;
+    color: #121314;
+} 
+
+.navbar i {
+    font-size: 40px;
+    color: rgba(12, 12, 12, 0.6);
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.navbar-list li:last-child > a {
+    border: 1px solid rgba(169, 167, 167, 0.6);
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 3px;
+    transition: all 0.3 linear;
+} 
+
+.navbar-list li:last-child > a:hover {
+    background-color: antiquewhite;
+    color: #121314;
+    transition: all 0.3 linear;
+    font-weight: 700;
+}
+
+@media (max-width:992px){
+    .header {
+        padding: 0px 50px 0px 10px;
+    }
+
+    .navbar i {
+        display: block;
+    }
+    .navbar-list {
+        position: absolute;
+        background-color:#121314;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        display: none;
+        z-index: 9999;
+    } 
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
