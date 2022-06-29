@@ -71,6 +71,7 @@
     list-style: none;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 700;
     font-family: "Lato",sans-serif;
     color: black;
 } 
