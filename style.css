@@ -8,15 +8,15 @@
     text-decoration: none;
 } 
 
+html {
+    scroll-padding-top: 100px;
+}
+
 .body{
     width: 100%;
 }
 
-.section-container {
-   /* border: 1px #CCC solid ; */
-   box-shadow: 0 0 10px 1px rgba(169, 167, 167, 0.6) ;
-    
-}
+
 
 .section {
     display: flex;
@@ -32,6 +32,8 @@
     position: sticky;
     top: 0;
     z-index: 9999;
+    background-color: whitesmoke ;
+    box-shadow: 0 0 10px 1px rgba(169, 167, 167, 0.6) ;
 }
  
 .header {
@@ -42,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 80px 0px 50px;
+    
     
 } 
 
@@ -74,14 +77,23 @@
     font-weight: 700;
     font-family: "Lato",sans-serif;
     color: black;
-} 
+    } 
 
 .navbar i {
     font-size: 40px;
     color: rgba(12, 12, 12, 0.6);
     cursor: pointer;
     display: none;
+} 
+
+a {
+    transition: all 0.3s;
+} 
+
+a:hover {
+    color: crimson;
 }
+
 
 #toggle-menu {
     display: none;
@@ -96,11 +108,13 @@
 } 
 
 .navbar-list li:last-child > a:hover {
-    background-color: antiquewhite;
+    background-color: rgb(208, 208, 208);
     color: #121314;
     transition: all 0.3 linear;
     font-weight: 700;
-}
+} 
+
+
 
 @media (max-width:992px){
     .header {
@@ -112,7 +126,7 @@
     }
     .navbar-list {
         position: absolute;
-        background-color:#121314;
+        background-color:#b9b7b7;
         flex-direction: column;
         top: 100px;
         right: 0;
@@ -124,5 +138,152 @@
 
     #toggle-menu:checked + .navbar-list {
         display: flex;
+    }
+}
+
+#hero {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px;
+} 
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    gap: 40px; 
+} 
+
+.text-container {
+   max-width: max(40%,300px);
+}
+
+.text-container h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+} 
+
+.text-container p {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Lato",sans-serif;
+} 
+
+.hero-img{
+    background-image: url(./img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 30%;
+    height: 350px;
+    border-radius: 5px ;
+}  
+
+@media (max-width: 768px) {
+    .hero-img {
+        display: none; 
+    }
+    .description-container {
+        justify-content: center;
+        align-items: center;
+    } 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+}
+
+#about-us {
+    gap: 15%;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    background-image: url(./img/about\ us.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.about-content {
+    height: 300px;
+    width: 300px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px; 
+} 
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+} 
+
+.section-p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Lato",sans-serif;
+} 
+
+.adress {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Lato",sans-serif;
+} 
+
+.about-cards-container {
+    display: flex;
+    gap:  30px;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b9b7b7;
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+} 
+
+.about-card:hover {
+    background-color: salmon;
+    transition: all 0.3s linear; 
+} 
+
+@media (max-width: 768px){
+    #about-us {
+        flex-direction: column;
+        gap: 20px;
     }
 }
