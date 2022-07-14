@@ -10,9 +10,10 @@
 
 html {
     scroll-padding-top: 100px;
+    scroll-behavior: smooth;
 }
 
-.body{
+body{
     width: 100%;
 }
 
@@ -286,4 +287,101 @@ a:hover {
         flex-direction: column;
         gap: 20px;
     }
+}   
+
+#line-up {
+    flex-direction: column;
+    gap: max(120px, 10%);
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25%;
+    width: 75%;
+} 
+
+.btn-comprar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 5px; 
+    border: 1rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    background-color: #b9b7b7;
+} 
+
+.btn-comprar:hover {
+    background-color: salmon;
+    transform: scale(1.1);
+}
+
+.catalogo-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    gap: 90px;
+} 
+
+.catalogo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px 1px rgba(169, 167, 167, 0.6);
+    border-radius: 20px;
+    background-color: whitesmoke;
+    transition: all 1.5s;
+}
+
+.catalogo-card-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.catalogo-card:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.catalogo-card:first-child .catalogo-card-img {
+    background-image: url(./img/catalog1.png);
+} 
+
+.catalogo-card:nth-child(2) .catalogo-card-img {
+    background-image: url(./img/catalog2.png);
+}
+
+.catalogo-card:nth-child(3) .catalogo-card-img {
+    background-image: url(./img/catalog3.png);
+}
+
+.catalogo-card:nth-child(4) .catalogo-card-img {
+    background-image: url(./img/catalog4.png);
+}
+
+.catalogo-card:nth-child(5) .catalogo-card-img {
+    background-image: url(./img/catalog5.png);
+}
+
+.catalogo-card:nth-child(6) .catalogo-card-img {
+    background-image: url(./img/catalog6.png);
 }
