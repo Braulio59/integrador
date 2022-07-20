@@ -582,14 +582,6 @@ input:focus {
     outline: none;
 }
 
-/* input:last-child {
-    margin-top: 60px;
-    background-color: rgba(169, 167, 167, 0.6) ;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-}   */
-
 .btning {
     margin-top: 60px;
     background-color: rgba(230, 229, 229, 0.6) ;
@@ -620,6 +612,7 @@ input:focus {
      } 
     100% {transform: scale(1.2);}
 }
+/* login */
 
 .login-title-2{
     font-size: 20px;
